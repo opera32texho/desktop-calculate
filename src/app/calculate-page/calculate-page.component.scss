@@ -1,0 +1,166 @@
+*body {
+  font-family: "Robo";
+}
+
+.container {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  .calculator {
+    width: 50%;
+    height: 100%;
+    padding: 100px 40px;
+    &__currency {
+      width: 100%;
+      max-width: 547px;
+      margin-bottom: 28px;
+      label {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+      }
+      &__select-style {
+        margin-top: 12px;
+        padding: 15.5px 22px;
+        background: #f4f5f6;
+
+        select {
+          border: none;
+          font-weight: 500;
+          font-size: 18px;
+          width: 100%;
+          line-height: 20px;
+          color: #4a5653;
+          background-color: inherit;
+        }
+        select:focus {
+          outline: none;
+        }
+        select option {
+          /* Custom styling for select options */
+          background-color: #F6F7FB;
+          color: #333;
+          padding: 8px 12px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        select option:hover {
+          /* Custom styling for hovered select option */
+          background-color: #F6F7FB;
+        }
+      }
+    }
+    &__amount {
+      margin-top: 130px;
+      width: 100%;
+      max-width: 547px;
+      margin-bottom: 28px;
+      label {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+      }
+      &__input {
+        margin-top: 12px;
+        position: relative;
+        padding: 16px 0px 14px 22px;
+
+        background-color: #f4f5f6;
+        .decrement {
+          color: #c75d30;
+          position: absolute;
+          left: 105px;
+        }
+        .increment {
+          color: #539985;
+          position: absolute;
+          left: 130px;
+        }
+        input {
+          border: none;
+          height: 20px;
+          font-size: 18px;
+          background-color: inherit;
+        }
+        input:focus {
+          outline: none;
+        }
+        button {
+          border: none;
+          background: none;
+          padding: 0;
+          margin: 0;
+          outline: none;
+        }
+      }
+    }
+    &__period {
+      width: 100%;
+      max-width: 547px;
+      margin-bottom: 28px;
+      label {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+      }
+      &__select-style {
+        margin-top: 12px;
+        padding: 15.5px 22px;
+        background: #f4f5f6;
+
+        select {
+          border: none;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 20px;
+          color: #4a5653;
+          width: 100%;
+          background-color: inherit;
+        }
+        select:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .result {
+    width: 50%;
+    height: 100%;
+    padding: 40px 50px;
+    background-color: #56c6ad;
+    &__profit {
+      color: white;
+      &__name {
+        font-size: 16px;
+        font-weight: 400;
+        padding-bottom: 6px;
+      }
+      &__calculate {
+        font-weight: 700;
+        font-size: 55px;
+      }
+    }
+    &__percent{
+      margin-top: 36px;
+      color: white;
+      label{
+        font-size: 16px;
+        font-weight: 400;
+        padding-bottom: 6px;
+      }
+      &__style{
+        font-weight: 700;
+        font-size: 55px;
+      }
+    }
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}

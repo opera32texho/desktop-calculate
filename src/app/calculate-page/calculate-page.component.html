@@ -1,0 +1,53 @@
+<form [formGroup]="calculatorForm">
+  <div class="container">
+    <div class="calculator">
+      <div class="calculator__amount">
+        <label>Amount?</label>
+        <div class="calculator__amount__input">
+          <input type="number" formControlName="amount" />
+          <button (click)="decreaseAmount()" class="decrement">
+            <mat-icon>remove_circle</mat-icon>
+          </button>
+          <button (click)="increaseAmount()" class="increment">
+            <mat-icon>add_circle</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="calculator__currency">
+        <label>Currency?</label>
+        <div class="calculator__currency__select-style">
+          <select formControlName="currency">
+            <option *ngFor="let currency of currencies" [value]="currency">
+              {{ currency }} {{212}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="calculator__period">
+        <label>Period?</label>
+        <div class="calculator__period__select-style">
+          <select formControlName="period">
+            <option *ngFor="let period of periods" [value]="period">
+              {{ period }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <div class="result__profit">
+        <div>
+          <div class="result__profit__name">Profit</div>
+          <div class="result__profit__calculate">{{ calculateProfit() }}</div>
+        </div>
+      </div>
+      <div class="result__percent">
+        <label >Percent</label>
+        <div class="result__percent__style">
+          59%
+        </div>
+      </div>
+      <div class="result__stars"></div>
+    </div>
+  </div>
+</form>
