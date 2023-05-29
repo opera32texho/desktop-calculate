@@ -4,7 +4,7 @@
       <div class="calculator__amount">
         <label>Amount?</label>
         <div class="calculator__amount__input">
-          <input type="number" formControlName="amount" />
+          <input type="number" formControlName="amount" (keydown)="preventInput($event)" />
           <button (click)="decreaseAmount()" class="decrement">
             <mat-icon>remove_circle</mat-icon>
           </button>
@@ -16,9 +16,10 @@
       <div class="calculator__currency">
         <label>Currency?</label>
         <div class="calculator__currency__select-style">
-          <select formControlName="currency">
-            <option *ngFor="let currency of currencies" [value]="currency">
-              {{ currency }} {{212}}
+          <select formControlName="currency" >
+
+            <option *ngFor="let currency of currencies; let i = index;" [value]="currency">
+              {{ currency }} <span class="aps-style">{{persent[i]}}</span>
             </option>
           </select>
         </div>
